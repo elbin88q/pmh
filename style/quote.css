@@ -1,0 +1,391 @@
+
+.quote-container {  
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    
+  }
+  .vertical-quote { grid-area: 1 / 1 / 5 / 2; }
+  .horizontal-quote { grid-area: 1 / 2 / 3 / 6; }
+  .quote-form { grid-area: 3 / 3 / 5 / 5;}
+  .quote-img { grid-area: 3 / 2 / 5 / 3; }
+  .quote-fill { grid-area: 3 / 5 / 5 / 6; }
+  .horizontal-img { grid-area: 2 / 2 / 3 / 4; }
+  
+  .quote-img{
+    background: url(../public/paintwall.jpg);
+    background-size: cover;
+    background-position: top;
+  
+    background-attachment: fixed;
+  
+  }
+  
+  .quote-form{
+    background-color:#feee50;
+  }
+  .quote-fill{
+    margin-top: 40px;
+    background-color:  #feee50;
+  }
+  
+  .horizontal-img{
+    margin-top: 190px;
+    background: url(../public/paintwall.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+  }
+  
+  
+  
+  
+  .vertical-quote{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    writing-mode: vertical-rl; /* Vertical writing mode from right to left */
+    text-orientation: mixed; /* Enable mixed text orientation */
+    transform: rotate(180deg); /* Rotate the text for readability */
+  }
+  
+  .firstquote{
+  font-weight: 500;
+  word-spacing: -10px;
+  font-size: 90px;
+  
+  }
+  .secondquote{
+    font-weight: 400;
+    font-size: 40px;
+    color: #a8efff;
+  }
+  .horizontal-quote{
+    width: 90%;
+  }
+  
+  .form-bg{
+    background:  url(../public/brush.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    height: 400px;
+    width: 500px;
+  }
+  
+  
+  .form
+  {
+  margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      border: 1px solid black;
+      flex-direction: column;
+      color: rgb(0, 0, 0);
+      transform: translatex(10px);
+  }
+  
+  .input-group
+  {
+      padding: 1% 0;
+  }
+  
+  .form input
+  {
+      color: inherit;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #000000;
+      padding: 1.5%;
+      font-size: 19px;
+      font-weight: 1;
+  }
+  
+  
+  .form input:focus
+  {
+      background-color: transparent;
+      outline: transparent;
+      border-bottom: 2px solid #a8efff;
+  }
+  
+  .form input::placeholder
+  {
+      color: transparent;
+  }
+  
+  .form label
+  {
+      color: #000000;
+      position: relative;
+      left: 0.5em;
+      top: -2em;
+      cursor: auto;
+      transition: 0.3s ease all;
+  }
+  
+  .form input:focus ~ label, input:not(:placeholder-shown) ~ label
+  {
+      top: -3.8em;
+      color: rgba(168, 239, 255, 1);
+      font-size: 15px;
+  }
+  
+  .button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .quote-btn{
+    padding: 10px 30px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+  
+  }
+  .quote-heading{
+  width: 90%;
+  margin: auto;
+  
+  }
+  
+  .first-text-quote{
+    margin: auto;
+    width: 70%;
+  position: relative;
+    display: flex;
+    align-items: center;
+  
+  
+  }
+  .center-quote{
+    justify-content: center;
+  transform: translate(5%, 25%);
+  
+  }
+  .second-text-quote{
+  font-size: 150px;
+  font-weight: 500;
+  }
+  .third-text-quote{
+    color: rgba(168, 239, 255, 1);
+    line-height: 0.9;
+  font-size: 57px;
+  font-weight: 500;
+  position: relative;
+  
+  }
+  
+  .quote-img img{
+    width: 350px;
+    height: 350px;
+    background-size: cover;
+    border-radius: 0px;
+  
+    
+  }
+  
+  .upward{
+    justify-content: center;
+  }
+  @media screen and (max-width: 1200px)
+  {
+      .form
+      {
+          width: 100%;
+      }
+      .quote-img img{
+        width: 290px;
+        height: 290px;
+      }
+      .firstquote{
+        font-size: 80px;
+      }
+      .secondquote{
+        font-size: 45px;
+      }
+      .second-text-quote{
+        font-size: 100px;
+      }
+      .third-text-quote{
+        font-size: 45px;
+      }
+  }
+  
+  @media screen and (max-width: 800px)
+  {
+      .form
+      {
+          width: 100%;
+      }
+      .quote-img img{
+        width: 90px;
+        height: 90px;
+      }
+      .firstquote{
+        font-size: 60px;
+      }
+      .secondquote{
+        font-size: 30px;
+      }
+      .second-text-quote{
+        font-size: 70px;
+      }
+      .third-text-quote{
+        font-size: 30px;
+      }
+  
+      .quote-container {
+        grid-template-rows: 1fr 1fr 1fr; /* Decrease the number of rows */
+      }
+    
+      .vertical-quote {
+        grid-area: 1 / 1 / 4 / 2; /* Adjusted grid area */
+      }
+    
+      .horizontal-quote {
+        grid-area: 1 / 2 / 2 / 6; /* Adjusted grid area */
+      }
+    
+      .quote-form {
+        grid-area: 2 / 3 / 4 / 5; /* Adjusted grid area */
+      }
+    
+      .quote-img {
+        grid-area: 2 / 2 / 4 / 3; /* Adjusted grid area */
+      }
+    
+      .quote-fill {
+        grid-area: 2 / 5 / 4 / 6; /* Adjusted grid area */
+      }
+    
+      .horizontal-img {
+        margin-top: 150px;
+        grid-area: 1 / 2 / 2 / 4; /* Adjusted grid area */
+      }
+      .form input:focus ~ label, input:not(:placeholder-shown) ~ label
+      {
+          font-size: 13px;
+          top: -3em;
+      }
+      input
+      {
+        font-size: 12px;
+      }
+      form label{
+        font-size: 12px;
+      }
+    
+      .form input{
+        font-size: 12px;
+       
+      input:focus ~ label, input:not(:placeholder-shown) ~ label
+        {
+          top: -3em;
+          left: 0.1em;
+        }
+        
+  }
+  
+  @media screen and (max-width: 500px)
+  {
+      .title
+      {
+          font-size: 40px;
+          padding-top: 6%;
+      }
+  
+      .title-info
+      {
+          font-size: 13px;
+      }
+      
+      .form
+      {
+      border: 0.2px solid black;
+          padding: 6% 4%;
+          padding-top: 15%;
+      }
+    .button-div{
+      font-size: 10px;
+    }
+  .quote-btn{
+    padding: 5px 15px;
+    border: 0.5px solid black;
+  }
+      .input-group, .textarea-group
+      {
+          padding: 1% 0;
+      }
+      
+      input, textarea
+      {
+          font-size: 10px;
+      }
+    form label{
+      font-size: 10px;
+    }
+  
+    .form input{
+      font-size: 10px;
+    }
+      input:focus ~ label, input:not(:placeholder-shown) ~ label
+      {
+          top: -3.5em;
+          left: 0.1em;
+      }
+      
+        
+      .form
+      {
+          width: 100%;
+      }
+      .quote-img img{
+        width: 60px;
+        height: 60px;
+      }
+      .firstquote{
+        font-size: 35px;
+      }
+      .secondquote{
+        font-size: 20px;
+      }
+      .second-text-quote{
+        font-size: 45px;
+      }
+      .third-text-quote{
+        font-size: 20px;
+      }
+      .horizontal-img {
+        margin-top: 100px;
+      }
+      .quote-heading{
+        width: 100%;
+      }
+      .quote-container{
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      .form input:focus ~ label, input:not(:placeholder-shown) ~ label
+      {
+          top: -3.5em;
+          color: rgba(168, 239, 255, 1);
+          font-size: 10px;
+      }
+      
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Div Vertically</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .vertical {
+            background-color: antiquewhite;
+            height: 100vh;
+            display: flex;
+        }
+.flip-vertical{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            padding-left: 20px;
+            writing-mode: vertical-rl; /* Vertical writing mode from right to left */
+            text-orientation: mixed; /* Enable mixed text orientation */
+            transform: rotate(180deg); /* Rotate the text for readability */
+        }
+    
+.first-flip h1{
+    font-weight: 900;
+    word-spacing: -10px;
+    font-size: 90px;
+
+}
+.second-flip{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: baseline;
+
+
+}
+.second-text h2{
+    color: rgb(189, 17, 86);
+    font-size: 59px;
+    font-weight: 700;
+
+}
+.second-head{
+    color: black;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+        .circle-anime{
+            width: 100%;
+            background-color: black;
+        }
+        @media (max-height: 991px) {
+            .first-flip h1{
+                font-size: 90px;
+            }
+            }
+           
+            text {
+  fill: white;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-variant-ligatures: none;
+  letter-spacing: 6px;
+  animation: rotate 25s linear infinite;
+  transform-origin: 250px 250px;
+}
+
+svg{ /* Adjust the size as needed */
+  position: absolute;
+  top: 0; /* Adjust the value to control the vertical positioning */
+  right: 0; /* Adjust the value to control the horizontal positioning */
+
+  max-width: 45vmin;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.textcircle {
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+  transform-origin: 250px 250px;
+}
+
+svg:hover .textcircle {
+  transform: scale(1.2) rotate(90deg);
+}
+@media (max-width: 991px) {
+    .vertical{
+        height: auto;
+    }
+    .first-flip h2{
+        font-size: 40px;
+    }
+    .first-flip h1{
+        font-size: 80px;
+    }
+}
+@media (max-width: 550px) {
+    .vertical{
+        height: auto;
+    }
+    .first-flip h2{
+        font-size: 20px;
+    }
+    .first-flip h1{
+        font-size: 50px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section class="vertical">
+    <div class="flip-vertical">
+            <div class="first-flip"><h1>PAINT MY HOME</h1>
+                <div class="second-flip">
+                    <div class="second-text"><h2>Best Painting Experts<h2></h2></div>
+                    <div class="second-head">Fast And Reliable</div> 
+     
+                </div>          
+                </div>
+            </div>
+    <div class="circle-anime">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+            <title>Circular Text Path</title>
+            <defs>
+              <path id="textcircle" d="M250,350
+                           a100,100 0 0,1 0,-200a100,100 0 0,1 0,200Z" transform="rotate(12,250,250)" />
+            </defs>
+            <g class="textcircle">
+              <text textLength="628">
+                <textPath 
+                          xlink:href="#textcircle" 
+                          aria-label="CSS & SVG are awesome" 
+                          textLength="628">
+                  CSS &amp; SVG are awesome | CSS &amp; SVG are awesome |&#160;
+                </textPath>
+              </text>
+            </g>
+          </svg>
+    </div>
+    </section>
+</body>
+</html>
